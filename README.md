@@ -37,3 +37,4 @@ php composer tests
 * GET commissiongroups missing 
 * GET transactions by ID missing 
 * GET reports missing 
+test
