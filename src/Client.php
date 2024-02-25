@@ -5,6 +5,7 @@ namespace Yuzu\Awin;
 use Yuzu\Awin\Http\Response;
 use Yuzu\Awin\Request\GetAccountDefinition;
 use Yuzu\Awin\Request\GetCommissionGroupsDefinition;
+use Yuzu\Awin\Request\GetOffersDefinition;
 use Yuzu\Awin\Request\GetProgrammeDetailDefinition;
 use Yuzu\Awin\Request\GetProgrammesDefinition;
 use Yuzu\Awin\Request\GetTransactionsDefinition;
@@ -71,6 +72,16 @@ class Client
     public function getAccounts(array $options = [])
     {
         return $this->send(new GetAccountDefinition($options));
+    }
+
+    /**
+     * @doc https://wiki.awin.com/index.php/API_Post_Offers
+     * @param array $options
+     * @return Response
+     */
+    public function getOffers(array $options = [])
+    {
+        return $this->send(new GetOffersDefinition($options));
     }
 
     /**
